@@ -17,11 +17,7 @@ namespace Masking
             // If the String is empty or null we just leave it as is for the moment. 
             if (!string.IsNullOrEmpty(value))
             {
-                if (mask.Method == MaskingMethod.Encrypt)
-                {
-                   // value = AesOperation.EncryptString(mask.Value, value);
-                }
-                else if (mask.Method == MaskingMethod.Mask)
+                if (mask.Method == MaskingMethod.Mask)
                 {
                     Regex regex = new Regex(mask.Value.Trim());
                     Match match = regex.Match(value);
@@ -69,7 +65,7 @@ namespace Masking
             }
             return masks;
         }
-     
-  
+
+
     }
 }

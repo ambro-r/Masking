@@ -19,12 +19,12 @@ namespace Masking.Components
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {      
+        {
             return reader.Value;
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {         
+        {
             serializer.Serialize(writer, MaskApplicator.Instance.Mask(Mask, value.ToString()));
         }
 

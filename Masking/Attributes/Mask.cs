@@ -4,18 +4,18 @@ namespace Masking.Attributes
 {
     public enum MaskingMethod
     {
-        Encrypt,
         Mask,
         Replace,
         Trim
     }
 
     public class Mask : Attribute
-    {          
+    {
         readonly MaskingMethod _method;
         readonly string _value;
 
-        public Mask() { 
+        public Mask()
+        {
         }
 
         public Mask(MaskingMethod maskMethod, String value)

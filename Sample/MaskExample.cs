@@ -12,15 +12,16 @@ namespace Sample
         private Person_NotMasked NotMaskedPerson;
         private People people;
 
-        public MaskExample() {
+        public MaskExample()
+        {
             MaskedPerson = new Person_Masked()
             {
                 Name = "John",
                 Surname = "Smith",
-                ContactNumber = "0821234567",
+                ContactNumber = "0991231234",
                 Email = "john.smith@testdomain.com",
                 Address = "59 Hornbill Avenue, South Crater, Mars, 000345",
-                IdentityNumber = "7894561230"
+                IdentityNumber = "1234567890123"
             };
 
             NotMaskedPerson = new Person_NotMasked()

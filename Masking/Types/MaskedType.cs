@@ -5,11 +5,12 @@ namespace Masking.Types
 {
     public class MaskedType<T>
     {
-        
+
         public T Model { get; }
-      
-        public MaskedType(T model) {
-            Model = model;      
+
+        public MaskedType(T model)
+        {
+            Model = model;
         }
 
         public string Serialize()

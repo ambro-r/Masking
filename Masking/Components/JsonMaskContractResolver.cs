@@ -7,10 +7,10 @@ using System.Collections.Generic;
 namespace Masking.Components
 {
     public class JsonMaskContractResolver : DefaultContractResolver
-    {        
+    {
 
         public JsonMaskContractResolver() { }
-          
+
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
         {
             Dictionary<string, Mask> masks = MaskApplicator.Instance.MasksForType(type);
@@ -24,11 +24,12 @@ namespace Masking.Components
                     foreach (JsonProperty jsonProperty in jsonProperties)
                     {
                         string propertyName = jsonProperty.PropertyName;
-                        if(masks.ContainsKey(propertyName)) {
+                        if (masks.ContainsKey(propertyName))
+                        {
                             jsonProperty.Converter = new JsonMaskedFieldConverter(masks[propertyName]);
                         }
                     }
-                }                
+                }
             }
             return jsonProperties;
         }
