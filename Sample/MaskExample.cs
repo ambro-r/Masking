@@ -55,10 +55,5 @@ namespace Sample
             Console.WriteLine(string.Format("Applying the Mask : {0}", new MaskedType<People>(people).Serialize()));
         }
 
-        public void RunPostgreSQLExample()
-        {
-            // TO DO : Dapper & PostgreSQL
-        }
-
     }
 }
