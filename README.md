@@ -19,8 +19,8 @@ Masks a string based on a specified regular expression pattern.
 
 For example, the following implementation will replace all characters between the first 3 and last 3 values of a string, hence "12345678900987654321" will become "123XXXXXXXXXXXXXX321"
 ```csharp
-	[Mask(MaskingMethod.Mask, @"(?<=.{3}).+(?=.{3})")]
-    public string ContactNumber { get; set; }
+[Mask(MaskingMethod.Mask, @"(?<=.{3}).+(?=.{3})")]
+public string ContactNumber { get; set; }
 ```		
 
 #### Replace
@@ -29,8 +29,8 @@ Replaces a string with the specified string.
 
 For example, the following implemenation will replace the entire string, hence "12345678900987654321" will become "REPLACED"
 ```csharp
-	[Mask(MaskingMethod.Replace, @"REPLACED")]
-	public string ContactNumber { get; set; }
+[Mask(MaskingMethod.Replace, @"REPLACED")]
+public string ContactNumber { get; set; }
 ```		
 
 #### Trim
@@ -39,8 +39,8 @@ Trims a string based on a specified regular expression pattern. The characters "
 
 For example, the following implementation will trim all characters between the first 3 and last 3 values of a string, hence "12345678900987654321" will become "123...321"
 ```csharp
-	[Mask(MaskingMethod.Trim, @"(?<=.{3}).+(?=.{3})")]
-    public string ContactNumber { get; set; }
+[Mask(MaskingMethod.Trim, @"(?<=.{3}).+(?=.{3})")]
+public string ContactNumber { get; set; }
 ```		
 
 ### Example:
